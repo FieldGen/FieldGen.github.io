@@ -71,9 +71,9 @@
   <!-- TODO: Replace with your paper title and authors -->
   <title>FieldGen: From Teleoperated Pre-Manipulation Trajectories to Field-Guided Data Generation | Robotics Research</title>
   
-  <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  <!-- Favicon and App Icons (minimal change to JPG) -->
+  <link rel="icon" type="image/jpeg" href="static/images/icon.jpg">
+  <link rel="apple-touch-icon" href="static/images/icon.jpg">
   
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -262,12 +262,22 @@
                 </span>
 
                 <span class="link-block">
-                  <a href="https://github.com/keheye/fieldgen_video" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://arxiv.org/abs/2510.20774" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark" title="View on arXiv">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://github.com/FieldGen/FieldGen" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark" title="Source Code on GitHub">
                   <span class="icon">
                     <i class="fab fa-github"></i>
                   </span>
-                  <span>Video</span>
+                  <span>Code</span>
                   </a>
                 </span>
 
@@ -289,7 +299,7 @@
   </section>
 
 <!-- Demo Video -->
-<section class="hero is-small" style="padding-top: 1.5rem;">
+<section class="hero is-small" style="padding-top: 0;">
   <div class="hero-body" style="padding-top: 0;">
     <div class="container is-max-desktop">
       <div class="content has-text-centered">
@@ -539,12 +549,14 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{FieldGen2025,
-  title={FieldGen: From Teleoperated Pre-Manipulation Trajectories to Field-Guided Data Generation},
-  author={Wang, Wenhao and Ye, Kehe and Zhou, Xinyu and Chen, Tianxing and Min, Cao and Zhu, Qiaoming and Yang, Xiaokang and Shen, Yongjian and Yang, Yang and Yao, Maoqing and Mu, Yao},
-  journal={Under Review},
-  year={2025},
-  url={https://fieldgen.github.io}
+      <pre id="bibtex-code"><code>@misc{wang2025fieldgenteleoperatedpremanipulationtrajectories,
+      title={FieldGen: From Teleoperated Pre-Manipulation Trajectories to Field-Guided Data Generation}, 
+      author={Wenhao Wang and Kehe Ye and Xinyu Zhou and Tianxing Chen and Cao Min and Qiaoming Zhu and Xiaokang Yang and Yongjian Shen and Yang Yang and Maoqing Yao and Yao Mu},
+      year={2025},
+      eprint={2510.20774},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2510.20774}, 
 }</code></pre>
     </div>
 </section>
