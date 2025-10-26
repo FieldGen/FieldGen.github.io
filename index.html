@@ -303,7 +303,7 @@
   <div class="hero-body" style="padding-top: 0;">
     <div class="container is-max-desktop">
       <div class="content has-text-centered">
-        <video controls muted loop autoplay style="width: 100%; max-width: 900px; border-radius: 8px;">
+        <video id="demo-video" controls loop autoplay style="width: 100%; max-width: 900px; border-radius: 8px;">
           <source src="static/videos/demo.mp4" type="video/mp4">
         </video>
       </div>
@@ -583,6 +583,16 @@
 <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
     <!-- End of Statcounter Code -->
+
+  <!-- Set video volume to 50% -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const demoVideo = document.getElementById('demo-video');
+      if (demoVideo) {
+        demoVideo.volume = 0.5; // Set volume to 50%
+      }
+    });
+  </script>
 
   </body>
   </html>
