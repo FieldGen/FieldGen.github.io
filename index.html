@@ -219,15 +219,17 @@
               <span class="author-block">
                 <a href="#" target="_blank">Kehe Ye</a><sup>*2,4</sup>,</span>
               <span class="author-block">
-                <a href="#" target="_blank">Xinyu Zhou</a><sup>*2,5</sup>,</span>
+                <a href="#" target="_blank">Xinyu Zhou</a><sup>*2,6</sup>,</span>
               <span class="author-block">
                 <a href="#" target="_blank">Tianxing Chen</a><sup>*3,4</sup>,</span>
               <span class="author-block">
-                <a href="#" target="_blank">Cao Min</a><sup>5</sup>,</span>
+                <a href="#" target="_blank">Cao Min</a><sup>6</sup>,</span>
               <span class="author-block">
-                <a href="#" target="_blank">Qiaoming Zhu</a><sup>5</sup>,</span>
+                <a href="#" target="_blank">Qiaoming Zhu</a><sup>6</sup>,</span>
               <span class="author-block">
                 <a href="#" target="_blank">Xiaokang Yang</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="#" target="_blank">Ping Luo</a><sup>3</sup>,</span>
               <span class="author-block">
                 <a href="#" target="_blank">Yongjian Shen</a><sup>2</sup>,</span>
               <span class="author-block">
@@ -235,14 +237,15 @@
               <span class="author-block">
                 <a href="#" target="_blank">Maoqing Yao</a><sup>2</sup>,</span>
               <span class="author-block">
-                <a href="#" target="_blank">Yao Mu</a><sup>†,1</sup></span>
+                <a href="#" target="_blank">Yao Mu</a><sup>†1,5</sup></span>
             </div>
             <div class="is-size-5 publication-authors" style="margin-top: 10px;">
               <span class="author-block"><sup>1</sup>MoE Key Lab of Artificial Intelligence, AI Institute, SJTU&nbsp;&nbsp;</span>
               <span class="author-block"><sup>2</sup>AgiBot&nbsp;&nbsp;</span>
-              <span class="author-block"><sup>3</sup>HKU MMLab&nbsp;&nbsp;</span>
+              <span class="author-block"><sup>3</sup>HKU&nbsp;&nbsp;</span>
               <span class="author-block"><sup>4</sup>Lumina Group&nbsp;&nbsp;</span>
-              <span class="author-block"><sup>5</sup>School of Computer Science and Technology, Soochow University</span>
+              <span class="author-block"><sup>5</sup>Shanghai AI Laboratory&nbsp;&nbsp;</span>
+              <span class="author-block"><sup>6</sup>School of Computer Science and Technology, Soochow University</span>
             </div>
             <div class="is-size-6 publication-authors" style="margin-top: 5px;">
               <span class="eql-cntrb"><small><sup>*</sup>Equal Contribution</small></span>
@@ -505,6 +508,31 @@
   </div>
 </section>
 <!-- End Ablation Studies -->
+
+<!-- FieldGen-Reward -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Ablation on FieldGen-Reward</h2>
+      <p class="has-text-justified" style="margin-bottom: 30px;">
+        To further enhance data diversity and guide policy learning with explicit quality signals, we introduce a reward-conditioned variant of our method, termed <strong>FieldGen-Reward</strong>. This approach allows the policy to learn from a broader spectrum of trajectories, including those that are sub-optimal but still informative.
+      </p>
+      
+      <div class="content has-text-centered">
+        <img src="static/images/exp_reward.png" alt="FieldGen-Reward Results" style="width: 100%; max-width: 850px; border-radius: 8px;"/>
+        
+        <p class="has-text-justified" style="margin-top: 20px;">
+          In our experiments, we compare a standard Diffusion Policy (DP) trained on FieldGen data against a reward-conditioned version (DP-R.). For the same collection time budget, the FieldGen-Reward pipeline generates <strong>10 times the number of trajectories</strong>, with rewards uniformly distributed between 0 and 1. The DP-R. model is conditioned on this additional reward input during training.
+        </p>
+        
+        <p class="has-text-justified" style="margin-top: 15px;">
+          <strong>Key Findings:</strong> The reward-conditioned model (DP-R.) consistently and significantly outperforms the standard DP model across all tasks and time budgets. For instance, after just 4 minutes of data collection, DP-R. achieves an average success rate of <strong>79.2%</strong>, a <strong>+29.2%</strong> improvement over the standard DP. This performance gap widens with more data; at the 12-minute mark, DP-R. reaches a near-perfect average success rate of <strong>95.9%</strong>. These results demonstrate that explicitly modeling trajectory quality via rewards enables the policy to learn a more robust and effective representation of the task, leading to substantial gains in performance.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End FieldGen-Reward -->
 
 <!-- Collection Efficiency -->
 <section class="hero is-small is-light">
