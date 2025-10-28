@@ -567,6 +567,27 @@
 </section>
 <!-- End Collection Efficiency -->
 
+<!-- Motivation and Insight -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Motivation and Insight</h2>
+      <div class="content has-text-justified">
+        <p>
+          Our motivation starts here: The 1-to-N teleoperation systems like <a href="https://genie-centurion.github.io/" target="_blank">Genie Centurion</a> needs a base policy to start the data flywheel. In most real world applications, large scale data collection is not allowed or costly. We need a method to rapidly bootstrap the base policy in the deployment environment.
+        </p>
+        <p>
+          Our key insight is that in most manipulation tasks, only the last few action chunks determine success. The earlier approach phase mainly requires directional, low-precision actions, but benefits from wide spatial coverage to prevent OOD behavior. Can we auto-generate the data to cover the whole space? Thus, by synthetically pairing diverse observations with generated goal-directed actions, we can efficiently produce all necessary data for imitation learning.
+        </p>
+        <p>
+          Luckily, our method is very easy to use. No pipeline, no extra hardware and no heavy codebase. <strong>Simply teleoperate the robot once to manipulate and move the arms around the objects, then run a single Python script—no further action is required for data collection.</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Motivation and Insight -->
+
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
